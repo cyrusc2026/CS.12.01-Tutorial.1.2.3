@@ -6,7 +6,6 @@ public class Scramble {
             return input;
         }
         String answer = "";
-        System.out.println("Start for loop");
         for (int i = 0; i < input.length()-1; i++){
             if (input.charAt(i) == 'A' && (input.charAt(i+1) != (input.charAt(i)))) {
                 answer += (input.charAt(i+1));
