@@ -5,19 +5,19 @@ public class Scramble {
         if (input.length() < 2) {
             return input;
         }
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         for (int i = 0; i < input.length()-1; i++){
             if (input.charAt(i) == 'A' && (input.charAt(i+1) != (input.charAt(i)))) {
-                answer += (input.charAt(i+1));
-                answer += (input.charAt(i));
+                answer.append(input.charAt(i + 1));
+                answer.append(input.charAt(i));
                 i++;
             }
-            else answer += (input.charAt(i));
+            else answer.append(input.charAt(i));
         }
         if ( input.length() > 3){
-            answer += input.charAt(input.length()-1);
+            answer.append(input.charAt(input.length() - 1));
         }
-        return answer;
+        return answer.toString();
     }
     public static void scrambleOrRemove(List<String> wordList){
         for (int i = 0; i<wordList.size(); i++){
